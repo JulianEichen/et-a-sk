@@ -1,56 +1,18 @@
 /* nach codecoda: grid vs flexbox */
 
-.container0{
+.container{
+    width: 512px;
+    height: 512px;
     background-color: beige;
-}
-
-.container1 {
-
     display:grid;
-    grid-template-columns: 40px 1fr 20%;  
-    /* sagt dem Browser, dass 1. div 40 Pixel einnehmen soll, das 2. einen Bruchteil (FRaction), und das 3. 20% */
-    /* dabei ordnen sich div 4-6 automatisch in einer Zeile darunter an*/
-
-    grid-template-rows: 200px;
-    /* weist allen div's eine Höhe von 200 Pixeln zu. Funktioniert nur für die erste Reihe*/
-    background-color: beige;
-
+    grid-template: repeat(4,1fr) / repeat(4,1fr);
+    grid-gap: 0px;
 }
 
-.container1> div {
+.container > div {
     background-color: green;
-    margin: 10px;
-}
-
-.container2 {
-    display: grid;
-    
-    /* grid-template-columns: 16.7% 16.7% 16.7% 16.7% 16.7% 16.7% ; */
-    /* Alle divs in eine Reihe. 100/6 Prozet 'per Hand'. Besser mit fr, wie folgt:*/
-
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
-
-    /* dabei alle divs gleich groß. Alternativ, mit div 2 und 4 doppelt so große wie die anderen:*/
-    /*grid-template-columns: 1fr 2fr 1fr 2fr 1fr 1fr; */
-
-    /* alternative Schreibweise zu Variante 1: */
-    grid-template-columns: repeat(6,1fr);
-}
-
-.container2> div {
-    background-color: green;
-    margin: 10px;
-}
-
-
-.container3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    background-color: beige;
-    gap: 10px; /* analog zu margin*/
-}
-
-.container3> div {
-    background-color: green;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    aspect-ratio: 1;
 }
