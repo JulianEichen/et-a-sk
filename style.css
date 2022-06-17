@@ -1,6 +1,9 @@
 /* nach codecoda: grid vs flexbox */
 :root{
     --grid_length: 16;
+    --grid_border_color: 'black';
+    --grid_border_width: 1px;
+    --grid_border_style: 'solid';
 }
 
 .grid{
@@ -14,8 +17,8 @@
 
 .grid > div {
     background-color: green;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+    border-color: var(--grid_border_color);
+    border-width: var(--grid_border_width);
+    border-style: var(--grid_border_style);
     aspect-ratio: 1;
 }

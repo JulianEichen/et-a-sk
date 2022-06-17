@@ -30,12 +30,24 @@ function create_grid(length=16){
 const change_size = document.querySelector('.change_size');
 change_size.addEventListener('click', resize_grid);
 
+const toggle_grid = document.querySelector('.toggle_grid');
+toggle_grid.addEventListener('click', toggle_borders);
+
 // Menu functions
 function resize_grid() {
     var length = Math.min(prompt("Please enter a new length for the grid. (max 100)", 16), 100);
     create_grid(length);
 }
 
+function toggle_borders(){
+    const style = getComputedStyle(document.documentElement).getPropertyValue('--grid_border_style');
+    console.log(style);
+    if (getComputedStyle(document.documentElement).getPropertyValue('--grid_border_style') == "solid"){
+        document.documentElement.style.setProperty('--grid_border_style', "hidden");
+    }else{
+        document.documentElement.style.setProperty('--grid_border_style', "solid");
+    }
+}
 
 
 
