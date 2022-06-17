@@ -1,15 +1,37 @@
-const container = document.querySelector('.container');
+const grid = document.querySelector('.grid');
 
-const grid_size = 16*16;
+// Create the default grid
+create_grid();
 
-for (var i=0; i<grid_size;i++){
-    const div = document.createElement('div');
-    div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = 'white';
-    });
-    container.appendChild(div);
+function create_grid(length=16){
+    const grid_size = length*length;
+
+    // cleare grid
+    const current_squares = document.querySelectorAll('.square');
+    current_squares.forEach((square) => {
+        grid.removeChild(square);
+    })
+
+    // fill grid
+    for (var i = 0; i < grid_size; i++) {
+        const div = document.createElement('div');
+        div.className = "square";
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'white';
+        })
+        grid.appendChild(div);
+    }
 }
 
+// Create the menu
+const change_size = document.querySelector('.change_size');
+change_size.addEventListener('click', resize_grid);
+
+// Menu functions
+function resize_grid() {
+    var length = Math.min(prompt("Please enter a new length for the grid. (max 100)", 16), 100);
+    create_grid(length);
+}
 
 
 

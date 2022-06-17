@@ -1,15 +1,15 @@
 /* nach codecoda: grid vs flexbox */
 
-.container{
+.grid{
     width: 512px;
     height: 512px;
     background-color: beige;
     display:grid;
-    grid-template: repeat(4,1fr) / repeat(4,1fr);
+    grid-template: repeat(16,1fr) / repeat(16,1fr); 
     grid-gap: 0px;
 }
 
-.container > div {
+.grid > div {
     background-color: green;
     border-color: black;
     border-width: 1px;
