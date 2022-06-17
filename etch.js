@@ -12,6 +12,9 @@ function create_grid(length=16){
         grid.removeChild(square);
     })
 
+    // prepare style
+    document.documentElement.style.setProperty('--grid_length', length);
+
     // fill grid
     for (var i = 0; i < grid_size; i++) {
         const div = document.createElement('div');
