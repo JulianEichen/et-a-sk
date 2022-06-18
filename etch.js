@@ -33,6 +33,21 @@ change_size.addEventListener('click', resize_grid);
 const toggle_grid = document.querySelector('.toggle_grid');
 toggle_grid.addEventListener('click', toggle_borders);
 
+const select_brush = document.querySelector('.drop_button');
+select_brush.addEventListener('click', toggle_drop);
+
+const brush_earth = document.querySelector('.brush_earth');
+brush_earth.addEventListener('click', toggle_drop);
+
+const brush_plant = document.querySelector('.brush_plant');
+brush_plant.addEventListener('click', toggle_drop);
+
+const brush_water = document.querySelector('.brush_water');
+brush_water.addEventListener('click', toggle_drop);
+
+const brush_rock = document.querySelector('.brush_rock');
+brush_rock.addEventListener('click', toggle_drop);
+
 // Menu functions
 function resize_grid() {
     var length = Math.min(prompt("Please enter a new length for the grid. (max 100)", 16), 100);
@@ -49,6 +64,13 @@ function toggle_borders(){
     }
 }
 
+function toggle_drop(){
+    document.getElementById("myDrop").classList.toggle("show");
+}
+
+function change_color(color){
+    toggle_drop;
+}
 
 
 
