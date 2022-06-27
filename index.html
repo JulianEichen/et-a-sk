@@ -8,18 +8,23 @@
 </head>
 
 <body>
+
     <div id="header">
         <h1>
             MySketch
         </h1>
-        <div class="menu">
+    </div>
+
+    <div id="content">
+        <div id="menu">
             <h2>
                 Menu
             </h2>
+
             <div class="buttons">
                 <button class="change_size">CHANGE FIELD SIZE</button>
                 <button class="toggle_grid">TOGGLE BORDERS</button>
-                
+
                 <div class="dropdown">
                     <button class="drop_button">SELECT BRUSH</button>
                     <div id="myDrop" class="dropdown_content">
@@ -30,10 +35,15 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="grid">
+        </div> <!-- Menu-->
+
+
+
+        <div class="flexwrap">
+            <div class="grid"></div>
+        </div>
+
     </div>
 
     <script src="etch.js"></script>
