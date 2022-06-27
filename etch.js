@@ -3,7 +3,7 @@ const grid = document.querySelector('.grid');
 // Create the default grid
 create_grid();
 
-function create_grid(length=16){
+function create_grid(length=getComputedStyle(document.documentElement).getPropertyValue('--grid_length')){
     const grid_size = length*length;
 
     // cleare grid
@@ -40,17 +40,18 @@ const brush_earth = document.querySelector('.brush_earth');
 brush_earth.addEventListener('click', toggle_drop);
 
 const brush_plant = document.querySelector('.brush_plant');
-brush_plant.addEventListener('click', toggle_drop);
+brush_plant.addEventListener('click', change_plant() =>);
 
 const brush_water = document.querySelector('.brush_water');
-brush_water.addEventListener('click', toggle_drop);
+brush_water.addEventListener('click', change_brush);
 
 const brush_rock = document.querySelector('.brush_rock');
-brush_rock.addEventListener('click', toggle_drop);
+brush_rock.addEventListener('click', change_brush);
 
 // Menu functions
 function resize_grid() {
     var length = Math.min(prompt("Please enter a new length for the grid. (max 100)", 16), 100);
+    document.documentElement.style.setProperty('--grid_length', length);
     create_grid(length);
 }
 
@@ -68,9 +69,25 @@ function toggle_drop(){
     document.getElementById("myDrop").classList.toggle("show");
 }
 
-function change_color(color){
-    toggle_drop;
+function change_brush(color){
+    console.log("change_brush");
+    toggle_drop();
+    document.documentElement.style.setProperty('--grid_brush_color', color)
+    
+    // change listeners
+    const current_squares = document.querySelectorAll('.square');
+    current_squares.forEach((square) => {
+        square.removeEventListener('mouseover', () => {
+            div.style.backgroundColor = 'white';
+        });
+        /*
+        square.addEventListener('mouseover', () => {
+            div.style.backgroundColor = color;
+        }); */
+    })
 }
+
+
 
 
 
