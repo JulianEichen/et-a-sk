@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>R-P-S</title>
+    <title>MySketch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,7 +11,7 @@
 
     <div id="header">
         <h1>
-            MySketch
+            Nature Sketch
         </h1>
     </div>
 
@@ -25,15 +25,13 @@
                 <button class="change_size">CHANGE FIELD SIZE</button>
                 <button class="toggle_grid">TOGGLE BORDERS</button>
 
-                <div class="dropdown">
-                    <button class="drop_button">SELECT BRUSH</button>
-                    <div id="myDrop" class="dropdown_content">
-                        <button class="brush_earth">EARTH</button>
-                        <button class="brush_plant">PLANT</button>
-                        <button class="brush_water">WATER</button>
-                        <button class="brush_rock">ROCK</button>
-                    </div>
-                </div>
+                <select id="dropdown">
+                    <option value="white">SNOW</option>
+                    <option value="brown">EARTH</option>
+                    <option value="black">ROCK</option>
+                    <option value="green">PLANT</option>
+                    <option value="blue">WATER</option>
+                </select>
             </div>
 
         </div> <!-- Menu-->

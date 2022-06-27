@@ -4,6 +4,7 @@
     --grid_border_color: 'black';
     --grid_border_width: 1px;
     --grid_border_style: 'solid';
+    --grid_brush_color: 'white';
 }
 
 
@@ -52,22 +53,3 @@ body {
     border-style: var(--grid_border_style);
     aspect-ratio: 1;
 }
-
-/* Drop-Down button*/
-.dropdown {
-    position:relative;
-    display: inline-block;
-}
-
-.dropdown_content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    min-width: 100%;
-}
-
-.dropdown_content button {
-    display:block;
-}
-
-.show {display:block;}
