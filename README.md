@@ -1,5 +1,10 @@
 # et-a-sk
+Access:
+
+https://julianeichen.github.io/et-a-sk/
+
 Etch-A-Sketch project from theOdinProject:
+
 https://www.theodinproject.com/lessons/foundations-etch-a-sketch
 
 Task (extract):
