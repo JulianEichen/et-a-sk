@@ -1,7 +1,6 @@
 ## Etch-A-Sketch
 ### Access:
-[Demo Page](https://julianeichen.github.io/et-a-sk/)<br>
-[Repository](https://github.com/JulianEichen/et-a-sk/)
+[Demo Page](https://julianeichen.github.io/et-a-sk/)
 
 ### Source:
 Etch-A-Sketch project from theOdinProject: <br>
